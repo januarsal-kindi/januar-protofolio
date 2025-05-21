@@ -30,15 +30,8 @@ const nextConfig: NextConfig = {
     );
     return config;
   },
-  reactStrictMode: false,
-  trailingSlash: true,
   assetPrefix: isProd ? '/januar-portofolio/' : '',
   basePath: isProd ? '/januar-portofolio' : '',
-  output: 'export',
-  images: {
-    unoptimized: true,
-  },
-
 }
 
 export default nextConfig;

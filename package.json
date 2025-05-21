@@ -1,6 +1,7 @@
 {
   "name": "januar-portofolio",
   "version": "0.1.0",
+  "homepage": "https://januarsal-kindi.github.io/januar-portofolio",
   "private": true,
   "scripts": {
     "dev": "next dev",
