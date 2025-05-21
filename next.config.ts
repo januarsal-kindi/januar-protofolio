@@ -30,8 +30,9 @@ const nextConfig: NextConfig = {
     return config;
   },
   output: "export", // Optional: For static export
-  basePath: "/your-repo-name",
-  assetPrefix: "/your-repo-name/", // Include trailing slash for assetPrefix
-};
+  basePath: "/januar-portofolio", // Optional: For GitHub Pages
+  assetPrefix: "/januar-portofolio/", // Optional: For GitHub Pages
+
+}
 
 export default nextConfig;
