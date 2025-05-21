@@ -30,9 +30,7 @@ const nextConfig: NextConfig = {
     return config;
   },
   output: "export", // Optional: For static export
-  basePath: "/januar-portofolio", // Optional: For GitHub Pages
   assetPrefix: "/januar-portofolio/", // Optional: For GitHub Pages
-
 }
 
 export default nextConfig;
