@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+const isProd = process.env.NODE_ENV === 'production';
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -29,8 +30,15 @@ const nextConfig: NextConfig = {
     );
     return config;
   },
-  output: "export", // Optional: For static export
-  assetPrefix: "/januar-portofolio/", // Optional: For GitHub Pages
+  reactStrictMode: false,
+  trailingSlash: true,
+  assetPrefix: isProd ? '/januar-portofolio/' : '',
+  basePath: isProd ? '/januar-portofolio' : '',
+  output: 'export',
+  images: {
+    unoptimized: true,
+  },
+
 }
 
 export default nextConfig;
