@@ -30,8 +30,10 @@ const nextConfig: NextConfig = {
     );
     return config;
   },
-  assetPrefix: isProd ? '/januar-portofolio/' : '',
-  basePath: isProd ? '/januar-portofolio' : '',
+  images: {
+    unoptimized: true,
+    domains: ["seakun.id", "github.com"],
+  },
 }
 
 export default nextConfig;
