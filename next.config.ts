@@ -3,8 +3,9 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   /* config options here */
   webpack: (config) => {
-    const fileLoaderRule = config.module.rules.find((rule: { test: { test: (arg0: string) => any; }; }) =>
-      rule.test?.test?.(".svg")
+    const fileLoaderRule = config.module.rules.find(
+      (rule: { test: { test: (arg0: string) => any } }) =>
+        rule.test?.test?.(".svg")
     );
     if (fileLoaderRule) {
       fileLoaderRule.exclude = /\.svg$/i;
@@ -28,6 +29,9 @@ const nextConfig: NextConfig = {
     );
     return config;
   },
+  output: "export", // Optional: For static export
+  basePath: "/your-repo-name",
+  assetPrefix: "/your-repo-name/", // Include trailing slash for assetPrefix
 };
 
 export default nextConfig;
