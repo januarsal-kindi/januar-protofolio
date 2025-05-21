@@ -30,9 +30,11 @@ const nextConfig: NextConfig = {
     );
     return config;
   },
+  
   images: {
     unoptimized: true,
     domains: ["seakun.id", "github.com"],
+    path: isProd ? "/_next/image" : "http://localhost:3000/_next/image",
   },
 }
 
