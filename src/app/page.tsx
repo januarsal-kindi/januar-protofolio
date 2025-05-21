@@ -1,103 +1,132 @@
-import Image from "next/image";
+import Link from "next/link";
+import Experience from "@/components/Experience";
+import Projects from "@/components/Project";
+import IconMapper, { IconType } from "@/components/Stack/IconMapper";
+import Footer from "@/components/Footer";
+
+const myStack = [
+  "Javascript",
+  "Typescript",
+  "React",
+  "React-native",
+  "Vue",
+  "Webpack",
+  "Nuxt",
+  "Next",
+  "CSS",
+];
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="min-h-screen bg-[#191919] text-white">
+      {/* Navigation */}
+      <header className="container mx-auto px-4 py-6 flex items-center justify-between">
+        <div className="w-20">
+          <div className="font-bold text-xl">JS.</div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        <nav>
+          <ul className="flex space-x-8">
+            <li>
+              <Link href="#" className="text-white hover:text-[#5badff]">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="#projects"
+                className="text-white hover:text-[#5badff]"
+              >
+                Projects
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="#experience"
+                className="text-white hover:text-[#5badff]"
+              >
+                Experience
+              </Link>
+            </li>
+            <li>
+              <Link href="#contact" className="text-white hover:text-[#5badff]">
+                Contact
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      {/* Hero Section */}
+      <section className="container mt-32 mx-auto px-4 text-center">
+        <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r  from-fuchsia-500 to-cyan-500 text-transparent bg-clip-text">
+          Hi, I am Januar Salman
+        </h1>
+        <h1 className="text-4xl md:text-5xl font-bold mb-6">
+          I do{" "}
+          <span className="text-transparent font-semibold  bg-clip-text bg-gradient-to-bl from-[#FF8660] to-[#9A33FF]">
+            code{" "}
+          </span>
+          for{" "}
+          <span className="text-transparent font-semibold  bg-clip-text bg-gradient-to-bl  from-[#FF8660] to-[#9A33FF]">
+            joy and speed⚡️.
+          </span>
+        </h1>
+        <p className="max-w-2xl mx-auto text-[#c5c5c5] mb-6">
+          I’m a passionate Frontend Engineer based in Malang,Indonesia 🇮🇩.
+          passionate about building fast and user-friendly web interfaces. I’m
+          always learning to keep up with the latest in frontend development.
+        </p>
+        <div className="flex justify-center space-x-4">
+          {/* <Link
+            href="#contact"
+            className="bg-white text-[#191919] px-6 py-3 rounded-full font-medium hover:bg-opacity-90 transition"
+          >
+            Get in Touch
+          </Link> */}
+          <Link
+            href="https://drive.google.com/uc?export=download&id=1ZTQ5zva_9mknPBLPLbPyb70Gm1_ORpH6"
+            target="_blank"
+            className="border text-lg font-semibold border-white text-white px-5 py-3 rounded-full  duration-300 hover:bg-gradient-to-bl hover:from-[#FF8660]  hover:to-[#9A33FF] hover:bg-opacity-10 transition"
+          >
+            Download CV / Resume
+          </Link>
+        </div>
+      </section>
+
+      {/* Tech Stack */}
+      <section className="container mt-8 mx-auto px-4 py-16 text-center">
+        <h2 className="text-xl uppercase tracking-wider text-[#C5C5C5] mb-4">
+          EXPERIENCE WITH
+        </h2>
+
+        <div className="flex items-center justify-center">
+          <div className="flex justify-center items-center space-2 mt-4 max-w-4xl flex-wrap gap-4">
+            {myStack.map((stack) => {
+              return (
+                <div
+                  key={stack}
+                  className="w-auto px-3 py-1  bg-[#2a2a2a] rounded-full flex items-center justify-center space-x-1"
+                >
+                  <IconMapper
+                    className="w-10 h-10"
+                    name={stack.toLowerCase() as IconType}
+                  />
+                  <p className="text-xl font-white font-light">{stack}</p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Projects */}
+      <Projects />
+
+      {/* Experience */}
+      <Experience />
+
+      <Footer />
+      {/* Contact */}
     </div>
   );
 }
