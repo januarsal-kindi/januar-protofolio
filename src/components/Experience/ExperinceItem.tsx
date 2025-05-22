@@ -33,7 +33,7 @@ export default function ExperinceItem({
           <h3 className="text-lg md:text-xl font-bold">{title}</h3>
           <span className="text-sm text-[#8491a0]">{date}</span>
         </div>
-        <p className="text-[#c5c5c5]">{description}</p>
+        <p className="text-[#c5c5c5] md:text-lg text-sm">{description}</p>
       </div>
     </div>
   );
