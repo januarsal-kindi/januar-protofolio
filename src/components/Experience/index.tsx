@@ -39,7 +39,7 @@ const data = [
 export default function Experience() {
   return (
     <section id="experience" className="container mx-auto px-4 py-12 md:py-16 ">
-      <h2 className="text-2xl md:text-3xl font-bold text-center mb-12 bg-gradient-to-t   from-[#5BADFF] to-[#1373D1]  text-transparent bg-clip-text">
+      <h2 className="text-2xl md:text-3xl font-bold text-center mb-6 md:mb-12 bg-gradient-to-t   from-[#5BADFF] to-[#1373D1]  text-transparent bg-clip-text">
         EXPERIENCE
       </h2>
       <div className="max-w-3xl mx-auto space-y-12">

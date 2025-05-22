@@ -25,8 +25,11 @@ const data = [
 ];
 export default function Projects() {
   return (
-    <section id="projects" className="container mx-auto px-4 py-12 md:py-16 max-w-4xl">
-      <h2 className="text-2xl md:text-3xl font-bold text-center mb-12 bg-gradient-to-t   from-[#FF8660] to-[#D5491D]  text-transparent bg-clip-text">
+    <section
+      id="projects"
+      className="container mx-auto px-4 py-8 md:py-16 max-w-4xl transition-all duration-300"
+    >
+      <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12 bg-gradient-to-t   from-[#FF8660] to-[#D5491D]  text-transparent bg-clip-text">
         PROJECTS
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

@@ -31,9 +31,9 @@ export default function ProjectItem({
       </div>
       <div className="p-4">
         <div className="flex justify-between items-center">
-          <h3 className="text-xl font-extralight">{title}</h3>
+          <h3 className="text-lg md:text-xl  font-extralight">{title}</h3>
         </div>
-        <p className="text-md font-light my-3">{description}</p>
+        <p className="text-sm md:text-base  font-light my-3">{description}</p>
         <div className="flex space-x-1.5">
           {stack.map((icon, index) => (
             <IconMapper key={index} name={icon} className="w-6 h-6 " />
