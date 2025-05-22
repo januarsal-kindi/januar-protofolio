@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+import Image from "@/components/Image";
 import IconMapper, { type IconType } from "@/components/Stack/IconMapper";
 
 export type ProjectItemProps = {

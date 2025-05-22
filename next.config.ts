@@ -1,5 +1,5 @@
 import type { NextConfig } from "next";
-const isProd = process.env.NODE_ENV === 'production';
+const isProd = process.env.NODE_ENV === "production";
 
 const nextConfig: NextConfig = {
   /* config options here */
@@ -30,13 +30,15 @@ const nextConfig: NextConfig = {
     );
     return config;
   },
-  assetPrefix: isProd ? "/januar-portofolio" : "",
-  basePath: isProd ? "/januar-portofolio/" : "",
+  publicRuntimeConfig: {
+    basePath: isProd ? "/januar-portofolio" : "",
+  },
+  basePath: isProd ? "/januar-portofolio" : "",
   images: {
     unoptimized: true,
-    domains: ["seakun.id", "github.com"],
-    path: isProd ? "/_next/image" : "http://localhost:3000/_next/image",
+    // domains: ["seakun.id", "github.com"],
+    // path: isProd ? "/_next/image" : "http://localhost:3000/_next/image",
   },
-}
+};
 
 export default nextConfig;
