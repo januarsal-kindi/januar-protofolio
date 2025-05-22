@@ -33,11 +33,6 @@ const nextConfig: NextConfig = {
   publicRuntimeConfig: {
     basePath: isProd ? "/januar-portofolio" : "",
   },
-  output: 'export',
-  images: {
-    unoptimized: true,
-  },
-  basePath: isProd ? "/januar-portofolio" : "",
 };
 
 export default nextConfig;
