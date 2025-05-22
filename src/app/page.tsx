@@ -4,17 +4,17 @@ import Experience from "@/components/Experience";
 // import IconMapper, { IconType } from "@/components/Stack/IconMapper";
 import Footer from "@/components/Footer";
 
-const myStack = [
-  "Javascript",
-  "Typescript",
-  "React",
-  "React-native",
-  "Vue",
-  "Webpack",
-  "Nuxt",
-  "Next",
-  "CSS",
-];
+// const myStack = [
+//   "Javascript",
+//   "Typescript",
+//   "React",
+//   "React-native",
+//   "Vue",
+//   "Webpack",
+//   "Nuxt",
+//   "Next",
+//   "CSS",
+// ];
 
 export default function Home() {
   return (
