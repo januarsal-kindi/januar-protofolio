@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Experience from "@/components/Experience";
-// import Projects from "@/components/Project";
+import Projects from "@/components/Project";
 import IconMapper, { IconType } from "@/components/Stack/IconMapper";
 import Footer from "@/components/Footer";
 
@@ -120,7 +120,7 @@ export default function Home() {
       </section>
 
       {/* Projects */}
-      {/* <Projects /> */}
+      <Projects />
 
       {/* Experience */}
       <Experience />

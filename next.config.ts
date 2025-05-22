@@ -33,6 +33,9 @@ const nextConfig: NextConfig = {
   publicRuntimeConfig: {
     basePath: isProd ? "/januar-portofolio" : "",
   },
+  images: {
+    unoptimized: true,
+  },
 };
 
 export default nextConfig;
