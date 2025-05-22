@@ -1,20 +1,20 @@
 import Link from "next/link";
 import Experience from "@/components/Experience";
-import Projects from "@/components/Project";
-// import IconMapper, { IconType } from "@/components/Stack/IconMapper";
+// import Projects from "@/components/Project";
+import IconMapper, { IconType } from "@/components/Stack/IconMapper";
 import Footer from "@/components/Footer";
 
-// const myStack = [
-//   "Javascript",
-//   "Typescript",
-//   "React",
-//   "React-native",
-//   "Vue",
-//   "Webpack",
-//   "Nuxt",
-//   "Next",
-//   "CSS",
-// ];
+const myStack = [
+  "Javascript",
+  "Typescript",
+  "React",
+  "React-native",
+  "Vue",
+  "Webpack",
+  "Nuxt",
+  "Next",
+  "CSS",
+];
 
 export default function Home() {
   return (
