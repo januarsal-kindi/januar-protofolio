@@ -41,7 +41,7 @@ export default function IconMapper({
   width = 12,
 }: IconMapperProps) {
   const Icon = icons[name] as IconComponent;
-  if (!Icon) return null;
+  if (!Icon) return <></>;
 
   return <Icon className={className} height={height} width={width} />;
 }
