@@ -33,12 +33,12 @@ const nextConfig: NextConfig = {
   publicRuntimeConfig: {
     basePath: isProd ? "/januar-portofolio" : "",
   },
-  basePath: isProd ? "/januar-portofolio" : "",
+  output: 'export',
+  distDir: 'dist',
   images: {
     unoptimized: true,
-    // domains: ["seakun.id", "github.com"],
-    // path: isProd ? "/_next/image" : "http://localhost:3000/_next/image",
   },
+  basePath: isProd ? "/januar-portofolio" : "",
 };
 
 export default nextConfig;
