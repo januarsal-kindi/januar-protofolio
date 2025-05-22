@@ -1,20 +1,20 @@
 import Link from "next/link";
 import Experience from "@/components/Experience";
-// import Projects from "@/components/Project";
-// import IconMapper, { IconType } from "@/components/Stack/IconMapper";
+import Projects from "@/components/Project";
+import IconMapper, { IconType } from "@/components/Stack/IconMapper";
 import Footer from "@/components/Footer";
 
-// const myStack = [
-//   "Javascript",
-//   "Typescript",
-//   "React",
-//   "React-native",
-//   "Vue",
-//   "Webpack",
-//   "Nuxt",
-//   "Next",
-//   "CSS",
-// ];
+const myStack = [
+  "Javascript",
+  "Typescript",
+  "React",
+  "React-native",
+  "Vue",
+  "Webpack",
+  "Nuxt",
+  "Next",
+  "CSS",
+];
 
 export default function Home() {
   return (
@@ -94,7 +94,7 @@ export default function Home() {
       </section>
 
       {/* Tech Stack */}
-      {/* <section className="container mt-8 mx-auto px-4 py-16 text-center">
+      <section className="container mt-8 mx-auto px-4 py-16 text-center">
         <h2 className="text-xl uppercase tracking-wider text-[#C5C5C5] mb-4">
           EXPERIENCE WITH
         </h2>
@@ -117,10 +117,10 @@ export default function Home() {
             })}
           </div>
         </div>
-      </section> */}
+      </section>
 
       {/* Projects */}
-      {/* <Projects /> */}
+      <Projects />
 
       {/* Experience */}
       <Experience />
