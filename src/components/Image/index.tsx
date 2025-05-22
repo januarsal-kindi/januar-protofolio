@@ -8,7 +8,7 @@ const { publicRuntimeConfig } = getConfig();
 
 export default function Image({ src, ...arg }: ImageComponentProps) {
   const url =
-    typeof src === "string" ? `${publicRuntimeConfig?.basePath}${src} ` : src;
+    typeof src === "string" ? `${publicRuntimeConfig?.basePath || ''}${src} ` : src;
 
   return <NextImages {...arg} src={url} />; // Use unoptimized to prevent Next.js from optimizing the image
 }

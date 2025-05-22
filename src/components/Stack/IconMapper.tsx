@@ -1,19 +1,40 @@
 "use client";
 import React, { useEffect } from "react";
+import JavascriptIcon from "@/components/icons/javascript.svg";
+import TypescriptIcon from "@/components/icons/typescript.svg";
+import ReactIcon from "@/components/icons/react.svg";
+import ReactNativeIcon from "@/components/icons/react-native.svg";
+import VueIcon from "@/components/icons/vue.svg";
+import WebpackIcon from "@/components/icons/webpack.svg";
+import CSSIcon from "@/components/icons/css.svg";
+import NuxtIcon from "@/components/icons/nuxt.svg";
+import NextIcon from "@/components/icons/next.svg";
 
 // Define the type for the icon component
 
 const icons = {
-  javascript: () => import("@/components/icons/javascript.svg"),
-  typescript: () => import("@/components/icons/typescript.svg"),
-  react: () => import("@/components/icons/react.svg"),
-  "react-native": () => import("@/components/icons/react-native.svg"),
-  vue: () => import("@/components/icons/vue.svg"),
-  webpack: () => import("@/components/icons/webpack.svg"),
-  css: () => import("@/components/icons/css.svg"),
-  nuxt: () => import("@/components/icons/nuxt.svg"),
-  next: () => import("@/components/icons/next.svg"),
+  javascript: () => JavascriptIcon,
+  typescript: () => TypescriptIcon,
+  react: () => ReactIcon,
+  "react-native": () => ReactNativeIcon,
+  vue: () => VueIcon,
+  webpack: () => WebpackIcon,
+  css: () => CSSIcon,
+  nuxt: () => NuxtIcon,
+  next: () => NextIcon,
 };
+
+// const icons = {
+//   javascript: () => import("@/components/icons/javascript.svg"),
+//   typescript: () => import("@/components/icons/typescript.svg"),
+//   react: () => import("@/components/icons/react.svg"),
+//   "react-native": () => import("@/components/icons/react-native.svg"),
+//   vue: () => import("@/components/icons/vue.svg"),
+//   webpack: () => import("@/components/icons/webpack.svg"),
+//   css: () => import("@/components/icons/css.svg"),
+//   nuxt: () => import("@/components/icons/nuxt.svg"),
+//   next: () => import("@/components/icons/next.svg"),
+// };
 
 type IconComponent = React.FC<React.SVGProps<SVGSVGElement>>;
 
@@ -32,20 +53,15 @@ export default function IconMapper({
   width = 12,
 }: IconMapperProps) {
   const [Icon, setIcon] = React.useState<IconComponent | null>(null);
-  const [loading, setLoading] = React.useState(true);
 
   useEffect(() => {
-    icons[name]().then((mod) => {
-      setIcon(() => mod.default);
-      setLoading(false);
-    });
+    if (icons[name]) {
+      const IconComponent = icons[name]();
+      setIcon(() => IconComponent);
+    }
   }, [name]);
 
-  return loading && !Icon ? (
-    <div className="animate-pulse  ${className} ">
-      <div className={`bg-gray-300`} style={{ height, width }} />
-    </div>
-  ) : (
-    Icon && <Icon className={className} height={height} width={width} />
-  );
+  if (!Icon) return null;
+
+  return <Icon className={className} height={height} width={width} />;
 }
