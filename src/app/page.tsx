@@ -99,7 +99,7 @@ export default function Home() {
           EXPERIENCE WITH
         </h2>
 
-        {/* <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center">
           <div className="flex justify-center items-center space-2 mt-4 max-w-4xl flex-wrap gap-4">
             {myStack.map((stack) => {
               return (
@@ -116,11 +116,11 @@ export default function Home() {
               );
             })}
           </div>
-        </div> */}
+        </div>
       </section>
 
       {/* Projects */}
-      <Projects />
+      {/* <Projects /> */}
 
       {/* Experience */}
       <Experience />
