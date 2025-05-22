@@ -34,7 +34,7 @@ const nextConfig: NextConfig = {
     basePath: isProd ? "/januar-portofolio" : "",
   },
   output: 'export',
-  distDir: 'dist',
+  distDir: 'out',
   images: {
     unoptimized: true,
   },
