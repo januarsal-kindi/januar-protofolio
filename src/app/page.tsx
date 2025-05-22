@@ -94,7 +94,7 @@ export default function Home() {
       </section>
 
       {/* Tech Stack */}
-      <section className="container mt-8 mx-auto px-4 py-16 text-center">
+      {/* <section className="container mt-8 mx-auto px-4 py-16 text-center">
         <h2 className="text-xl uppercase tracking-wider text-[#C5C5C5] mb-4">
           EXPERIENCE WITH
         </h2>
@@ -117,10 +117,10 @@ export default function Home() {
             })}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Projects */}
-      <Projects />
+      {/* <Projects /> */}
 
       {/* Experience */}
       <Experience />
