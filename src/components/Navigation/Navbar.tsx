@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import BurgerIcon from "@/components/icons/burger.svg";
 import NavbarMobile from "./NavbarMobile";
 const menus = [
   {
