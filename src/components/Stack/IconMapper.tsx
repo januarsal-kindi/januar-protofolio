@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import JavascriptIcon from "@/components/icons/javascript.svg";
 import TypescriptIcon from "@/components/icons/typescript.svg";
 import ReactIcon from "@/components/icons/react.svg";
