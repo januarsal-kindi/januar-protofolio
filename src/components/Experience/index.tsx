@@ -3,6 +3,14 @@ import ExperinceItem from "./ExperinceItem";
 
 const data = [
   {
+    image: "/edot.jpg",
+    title: "Senior Frontend Engineer",
+    company: "eDOT (Nabati Group)",
+    date: "Aug 2025 - May 2026",
+    description:
+      "Senior Frontend Engineer at PT eDOT (Nabati Group) working across multi-country products. Drove platform modernization, design system initiative, CI/CD optimization, and AI-assisted feature delivery across eSuite and eDIC platforms.",
+  },
+  {
     image: "/ruangguru.png",
     title: "Frontend Engineer",
     company: "Ruangguru",
